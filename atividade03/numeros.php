@@ -6,13 +6,28 @@
     <title>Loop de 1 a 100</title>
 </head>
 <body>
-    <h1>Numeros de 1 a 100</h1>
+    <h1>Contador com Substituições (Divisível por 3, 5 e ambos)</h1>
     <ul>
         <?php
         for ($i = 1; $i <= 100; $i++) {
-            echo "<li>$i</li>";
+
+            if ($i % 3 == 0 && $i % 5 == 0) {
+                echo "<li>AB</li>";
+            }
+
+            elseif ($i % 3 == 0) {
+                echo "<li>A</li>";
+            }
+
+            elseif ($i % 5 == 0) {
+                echo "<li>B</li>";
+            }
+
+            else {
+                echo "<li>$i</li>";
+            }
         }
         ?>
-    </ul>
+
 </body>
 </html>
